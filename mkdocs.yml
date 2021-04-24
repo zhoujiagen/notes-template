@@ -6,6 +6,7 @@ repo_url: https://github.com/zhoujiagen/notes-template
 
 nav:
     - Home: index.md
+    - 'Math Symbols': math-symbols.md
     - 'Templates':
       - 'Article': _templates/article.md
       - 'Book': _templates/book.md
