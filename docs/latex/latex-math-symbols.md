@@ -1,4 +1,4 @@
-# Math Symbols
+# Latex Math Symbols
 
 > Symbols in "Mathematical Thinking, Problem-Solving and Proofs, Second Edition".
 
