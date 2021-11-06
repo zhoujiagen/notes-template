@@ -16,7 +16,11 @@ nav:
       - 'Article': _templates/article.md
       - 'Book': _templates/book.md
       - 'Code': _templates/code.md
-
+    - 'Tools':
+      - 'Emacs': tools/emacs.md
+      - 'Jupyter': tools/jupyter.md
+      - 'Markdown': tools/markdown.md
+            
 #theme: readthedocs
 theme:
   name: material

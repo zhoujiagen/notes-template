@@ -19,6 +19,13 @@
 - [Latex Single Document](docs/_templates/template-latex/single-document/template-ariticle.tex)
 - [Latex Multiple Document](docs/_templates/template-latex/divided-documents/template-ariticle.tex)
 
+
+## Tools
+
+- [emacs]()(docs/tools/emacs.md)
+- [Jupyter Notebook](docs/tools/jupyter.md)
+- [Markdown](docs/tools/markdown.md)
+
 Enjoy!
 
 ![Fun](docs/images/fun.gif)
