@@ -22,7 +22,7 @@
 
 ## Tools
 
-- [emacs]()(docs/tools/emacs.md)
+- [emacs](docs/tools/emacs.md)
 - [Jupyter Notebook](docs/tools/jupyter.md)
 - [Markdown](docs/tools/markdown.md)
 
