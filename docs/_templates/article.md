@@ -2,7 +2,7 @@
 
 |时间|内容|
 |:---|:---|
-|yyyymmdd||
+|yyyy-mm-dd||
 
 <!--
 Purugganan M, Hewitt J. How to read a scientific article[J]. Rice University, 2004.
