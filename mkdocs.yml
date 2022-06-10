@@ -20,7 +20,7 @@ nav:
       - 'Emacs': tools/emacs.md
       - 'Jupyter': tools/jupyter.md
       - 'Markdown': tools/markdown.md
-            
+
 #theme: readthedocs
 theme:
   name: material
@@ -34,7 +34,8 @@ markdown_extensions:
       guess_lang: False
   - toc:
       permalink: true
-  - pymdownx.arithmatex # LaTeX math equations
+  - pymdownx.arithmatex: # LaTeX math equations
+      generic: true
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.caret
@@ -47,6 +48,8 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.tilde
   - footnotes
   - pymdownx.superfences:
@@ -58,4 +61,7 @@ markdown_extensions:
 
 extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+  #- javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
