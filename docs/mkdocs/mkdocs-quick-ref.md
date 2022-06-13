@@ -12,36 +12,36 @@
 
 ### Install and configuration
 
-=== "install"
+install:
 
-    ``` shell
-    pip install mkdocs && mkdocs --version
-    pip install mkdocs-material
-    ```
+``` shell
+pip install mkdocs && mkdocs --version
+pip install mkdocs-material
+```
 
-=== "verification"
+verification:
+
+``` shell
+pip list | grep mkdocs
+mkdocs                             1.3.0
+mkdocs-material                    8.3.3
+mkdocs-material-extensions         1.0.3
+```
 
 
-    ``` shell
-    pip list | grep mkdocs
-    mkdocs                             1.3.0
-    mkdocs-material                    8.3.3
-    mkdocs-material-extensions         1.0.3
-    ```
+upgrade:
 
-=== "upgrade"
+``` shell
+pip install --upgrade mkdocs
+pip install --upgrade mkdocs-material
+pip install --upgrade mkdocs-material-extensions
+```
 
-    ``` shell
-    pip install --upgrade mkdocs
-    pip install --upgrade mkdocs-material
-    pip install --upgrade mkdocs-material-extensions
-    ```
+run:
 
-=== "run"
-
-    ``` shell
-    mkdocs serve --dev-addr=0.0.0.0:80  # Run on port 80, accessible over the local network.
-    ```
+``` shell
+mkdocs serve --dev-addr=0.0.0.0:80  # Run on port 80, accessible over the local network.
+```
 
 mkdocs.yml中添加:
 
@@ -98,143 +98,143 @@ markdown_extensions:
       alternate_style: true
 ```
 
-=== "Code"
+Code:
 
+```
+  === "C"
+
+      ``` c
+      #include <stdio.h>
+
+      int main(void) {
+        printf("Hello world!\n");
+        return 0;
+      }
+      ```
+
+  === "C++"
+
+      ``` c++
+      #include <iostream>
+
+      int main(void) {
+        std::cout << "Hello world!" << std::endl;
+        return 0;
+      }
+      ```
+```
+
+Effect:
+
+=== "C"
+
+    ``` c
+    #include <stdio.h>
+
+    int main(void) {
+      printf("Hello world!\n");
+      return 0;
+    }
     ```
-    === "C"
 
-        ``` c
-        #include <stdio.h>
+=== "C++"
 
-        int main(void) {
-          printf("Hello world!\n");
-          return 0;
-        }
-        ```
+    ``` c++
+    #include <iostream>
 
-    === "C++"
-
-        ``` c++
-        #include <iostream>
-
-        int main(void) {
-          std::cout << "Hello world!" << std::endl;
-          return 0;
-        }
-        ```
+    int main(void) {
+      std::cout << "Hello world!" << std::endl;
+      return 0;
+    }
     ```
-
-=== "Effect"
-
-    === "C"
-
-        ``` c
-        #include <stdio.h>
-
-        int main(void) {
-          printf("Hello world!\n");
-          return 0;
-        }
-        ```
-
-    === "C++"
-
-        ``` c++
-        #include <iostream>
-
-        int main(void) {
-          std::cout << "Hello world!" << std::endl;
-          return 0;
-        }
-        ```
 
 
 #### Arithmatex
 
 - https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#arithmatex
 
-=== "configuration"
+configuration:
 
-    ``` yaml title="mkdocs.yml"
-    markdown_extensions:
-      - pymdownx.arithmatex:
-          generic: true
+``` yaml title="mkdocs.yml"
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
 
-    extra_javascript:
-      - javascripts/mathjax.js
-      - https://polyfill.io/v3/polyfill.min.js?features=es6
-      - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-    ```
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+```
 
-=== "Code"
+Code:
 
-    ```
-    $$
-    E(\mathbf{v}, \mathbf{h}) = -\sum_{i,j}w_{ij}v_i h_j - \sum_i b_i v_i - \sum_j c_j h_j
-    $$
+```
+$$
+E(\mathbf{v}, \mathbf{h}) = -\sum_{i,j}w_{ij}v_i h_j - \sum_i b_i v_i - \sum_j c_j h_j
+$$
 
-    \[3 < 4\]
+\[3 < 4\]
 
-    \begin{align}
-      p(v_i=1|\mathbf{h}) & = \sigma\left(\sum_j w_{ij}h_j + b_i\right) \\
-      p(h_j=1|\mathbf{v}) & = \sigma\left(\sum_i w_{ij}v_i + c_j\right)
-    \end{align}
-    ```
+\begin{align}
+  p(v_i=1|\mathbf{h}) & = \sigma\left(\sum_j w_{ij}h_j + b_i\right) \\
+  p(h_j=1|\mathbf{v}) & = \sigma\left(\sum_i w_{ij}v_i + c_j\right)
+\end{align}
+```
 
-=== "Effect"
+Effect:
 
-    $$
-    E(\mathbf{v}, \mathbf{h}) = -\sum_{i,j}w_{ij}v_i h_j - \sum_i b_i v_i - \sum_j c_j h_j
-    $$
+$$
+E(\mathbf{v}, \mathbf{h}) = -\sum_{i,j}w_{ij}v_i h_j - \sum_i b_i v_i - \sum_j c_j h_j
+$$
 
-    \[3 < 4\]
+\[3 < 4\]
 
-    \begin{align}
-      p(v_i=1|\mathbf{h}) & = \sigma\left(\sum_j w_{ij}h_j + b_i\right) \\
-      p(h_j=1|\mathbf{v}) & = \sigma\left(\sum_i w_{ij}v_i + c_j\right)
-    \end{align}
+\begin{align}
+  p(v_i=1|\mathbf{h}) & = \sigma\left(\sum_j w_{ij}h_j + b_i\right) \\
+  p(h_j=1|\mathbf{v}) & = \sigma\left(\sum_i w_{ij}v_i + c_j\right)
+\end{align}
 
 ##### Material
 
-=== "Code"
+Code:
 
-    ```
-    $$
-    \underline{\textbf{f}} \texttt{loat}
-    \left\{ \begin{array}{l}
-     \underline{\textbf{add}} \\
-     \underline{\textbf{sub}} \texttt{tract} \\
-     \underline{\textbf{mul}} \texttt{tiply} \\
-     \underline{\textbf{div}} \texttt{ide} \\
-     \underline{\textbf{sq}} \texttt{uare}  \underline{\textbf{r}} \texttt{oo} \underline{\textbf{t}} \\
-     \underline{\textbf{min}} \texttt{imum} \\
-     \underline{\textbf{max}} \texttt{imum} \\
-    \end{array} \right\}
-    \left\{ \begin{array}{l}
-     \underline{\textbf{.s}} \texttt{ingle} \\
-     \underline{\textbf{.d}} \texttt{ouble} \\
-    \end{array} \right\}
-    $$
-    ```
+```
+$$
+\underline{\textbf{f}} \texttt{loat}
+\left\{ \begin{array}{l}
+ \underline{\textbf{add}} \\
+ \underline{\textbf{sub}} \texttt{tract} \\
+ \underline{\textbf{mul}} \texttt{tiply} \\
+ \underline{\textbf{div}} \texttt{ide} \\
+ \underline{\textbf{sq}} \texttt{uare}  \underline{\textbf{r}} \texttt{oo} \underline{\textbf{t}} \\
+ \underline{\textbf{min}} \texttt{imum} \\
+ \underline{\textbf{max}} \texttt{imum} \\
+\end{array} \right\}
+\left\{ \begin{array}{l}
+ \underline{\textbf{.s}} \texttt{ingle} \\
+ \underline{\textbf{.d}} \texttt{ouble} \\
+\end{array} \right\}
+$$
+```
 
-=== "Effect"
+Effect:
 
-    $$
-    \underline{\textbf{f}} \texttt{loat}
-    \left\{ \begin{array}{l}
-     \underline{\textbf{add}} \\
-     \underline{\textbf{sub}} \texttt{tract} \\
-     \underline{\textbf{mul}} \texttt{tiply} \\
-     \underline{\textbf{div}} \texttt{ide} \\
-     \underline{\textbf{sq}} \texttt{uare}  \underline{\textbf{r}} \texttt{oo} \underline{\textbf{t}} \\
-     \underline{\textbf{min}} \texttt{imum} \\
-     \underline{\textbf{max}} \texttt{imum} \\
-    \end{array} \right\}
-    \left\{ \begin{array}{l}
-     \underline{\textbf{.s}} \texttt{ingle} \\
-     \underline{\textbf{.d}} \texttt{ouble} \\
-    \end{array} \right\}
-    $$
+$$
+\underline{\textbf{f}} \texttt{loat}
+\left\{ \begin{array}{l}
+ \underline{\textbf{add}} \\
+ \underline{\textbf{sub}} \texttt{tract} \\
+ \underline{\textbf{mul}} \texttt{tiply} \\
+ \underline{\textbf{div}} \texttt{ide} \\
+ \underline{\textbf{sq}} \texttt{uare}  \underline{\textbf{r}} \texttt{oo} \underline{\textbf{t}} \\
+ \underline{\textbf{min}} \texttt{imum} \\
+ \underline{\textbf{max}} \texttt{imum} \\
+\end{array} \right\}
+\left\{ \begin{array}{l}
+ \underline{\textbf{.s}} \texttt{ingle} \\
+ \underline{\textbf{.d}} \texttt{ouble} \\
+\end{array} \right\}
+$$
 
 ##### Github
 
@@ -242,61 +242,61 @@ markdown_extensions:
 - [LaTeX/Mathematics](https://en.wikibooks.org/wiki/LaTeX/Mathematics)
 - [MathJax](http://docs.mathjax.org/en/latest/input/tex/index.html#tex-and-latex-support)
 
-=== "Code"
+Code:
 
-    ````
-    $$
-    \underline{\textbf{f}} \texttt{loat}
-    \begin{Bmatrix*}[l]
-     \underline{\textbf{add}} \\
-     \underline{\textbf{sub}} \texttt{tract} \\
-     \underline{\textbf{mul}} \texttt{tiply} \\
-     \underline{\textbf{div}} \texttt{ide} \\
-     \underline{\textbf{sq}} \texttt{uare}  \underline{\textbf{r}} \texttt{oo} \underline{\textbf{t}} \\
-     \underline{\textbf{min}} \texttt{imum} \\
-     \underline{\textbf{max}} \texttt{imum} \\
-    \end{Bmatrix*}
-    \begin{Bmatrix*}[l]
-     \underline{\textbf{.s}} \texttt{ingle} \\
-     \underline{\textbf{.d}} \texttt{ouble} \\
-    \end{Bmatrix*}
-    $$
-    ````
+````
+$$
+\underline{\textbf{f}} \texttt{loat}
+\begin{Bmatrix*}[l]
+ \underline{\textbf{add}} \\
+ \underline{\textbf{sub}} \texttt{tract} \\
+ \underline{\textbf{mul}} \texttt{tiply} \\
+ \underline{\textbf{div}} \texttt{ide} \\
+ \underline{\textbf{sq}} \texttt{uare}  \underline{\textbf{r}} \texttt{oo} \underline{\textbf{t}} \\
+ \underline{\textbf{min}} \texttt{imum} \\
+ \underline{\textbf{max}} \texttt{imum} \\
+\end{Bmatrix*}
+\begin{Bmatrix*}[l]
+ \underline{\textbf{.s}} \texttt{ingle} \\
+ \underline{\textbf{.d}} \texttt{ouble} \\
+\end{Bmatrix*}
+$$
+````
 
-=== "Effect"
+Effect:
 
-    $$
-    \underline{\textbf{f}} \texttt{loat}
-    \begin{Bmatrix*}[l]
-     \underline{\textbf{add}} \\
-     \underline{\textbf{sub}} \texttt{tract} \\
-     \underline{\textbf{mul}} \texttt{tiply} \\
-     \underline{\textbf{div}} \texttt{ide} \\
-     \underline{\textbf{sq}} \texttt{uare}  \underline{\textbf{r}} \texttt{oo} \underline{\textbf{t}} \\
-     \underline{\textbf{min}} \texttt{imum} \\
-     \underline{\textbf{max}} \texttt{imum} \\
-    \end{Bmatrix*}
-    \begin{Bmatrix*}[l]
-     \underline{\textbf{.s}} \texttt{ingle} \\
-     \underline{\textbf{.d}} \texttt{ouble} \\
-    \end{Bmatrix*}
-    $$
+$$
+\underline{\textbf{f}} \texttt{loat}
+\begin{Bmatrix*}[l]
+ \underline{\textbf{add}} \\
+ \underline{\textbf{sub}} \texttt{tract} \\
+ \underline{\textbf{mul}} \texttt{tiply} \\
+ \underline{\textbf{div}} \texttt{ide} \\
+ \underline{\textbf{sq}} \texttt{uare}  \underline{\textbf{r}} \texttt{oo} \underline{\textbf{t}} \\
+ \underline{\textbf{min}} \texttt{imum} \\
+ \underline{\textbf{max}} \texttt{imum} \\
+\end{Bmatrix*}
+\begin{Bmatrix*}[l]
+ \underline{\textbf{.s}} \texttt{ingle} \\
+ \underline{\textbf{.d}} \texttt{ouble} \\
+\end{Bmatrix*}
+$$
 
 #### Foot Notes
 
-=== "Code"
+Code:
 
-    ```
-    脚注: [^1]
+```
+脚注: [^1]
 
-    [^1]: https://squidfunk.github.io/mkdocs-material/extensions/footnotes/
-    ```
+[^1]: https://squidfunk.github.io/mkdocs-material/extensions/footnotes/
+```
 
-=== "Effect"
+Effect:
 
-    脚注: [^1]
+脚注: [^1]
 
-    [^1]: https://squidfunk.github.io/mkdocs-material/extensions/footnotes/
+[^1]: https://squidfunk.github.io/mkdocs-material/extensions/footnotes/
 
 
 #### Mermaid
@@ -315,6 +315,8 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
 ```
 
+Code:
+
 ```
   ``` mermaid
   graph TD;
@@ -324,6 +326,8 @@ extra_javascript:
       C-->D;
   ```
 ```
+
+Effect:
 
 ``` mermaid
 graph TD;
@@ -338,18 +342,20 @@ graph TD;
 - code: https://github.com/sprin/markdown-inline-graphviz/issues/7
 
 
-=== "install"
+install:
 
-    ```
-    pip install markdown-inline-graphviz-extension
-    ```
+```
+pip install markdown-inline-graphviz-extension
+```
 
-=== "configuration"
+configuration:
 
-    ``` yaml title="mkdocs.yml"
-    markdown_extensions:
-      - markdown_inline_graphviz
-    ```
+``` yaml title="mkdocs.yml"
+markdown_extensions:
+  - markdown_inline_graphviz
+```
+
+Code:
 
 ```
   <div>
@@ -363,6 +369,8 @@ graph TD;
   %}
   </div>
 ```
+
+Effect:
 
 <div>
 {% dot attack_plan.svg
