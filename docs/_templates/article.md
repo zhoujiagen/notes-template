@@ -73,28 +73,33 @@ Paragraph level: words or phrases to look for
 
 ### 术语
 
+<!-- 进展中需要再次确认的术语:
+
+进行中: 术语1
+已完成: ~~术语1~~
+-->
+
 ### 摘要
 
-|Title: [Enter the title of the class]||
-|:---|:---|
-|Topic: [Type the main topic.]||
-|Questions|Comments|
-|[Identify main questions.]|[Include accompanying notes.]|
-|||
-|Subtopic #1: [Type the name of the subtopic.]||
-|Questions|Comments|
-|||
-|Subtopic #2: [Type the name of the subtopic.]||
-|Questions|Comments|
-|||
-Subtopic #3: [Type the name of the subtopic.]
-|Questions|Comments|
-|||
-|Subtopic #4: [Type the name of the subtopic.]||
-|Questions|Comments|
-|||
-|Summary||
-|[Summarize all of the contents presented in the lesson.]||
+|Title: [Enter the title of the class]                    |                              |
+|:---                                                     |:---                          |
+|Topic: [Type the main topic.]                            |                              |
+|Questions                                                |Comments                      |
+|[Identify main questions.]                               |[Include accompanying notes.] |
+|                                                         |                              |
+|Subtopic #1: [Type the name of the subtopic.]            |                              |
+|Questions                                                |Comments                      |
+|                                                         |                              |
+|Subtopic #2: [Type the name of the subtopic.]            |                              |
+|Questions                                                |Comments                      |
+|                                                         |                              |
+|Questions                                                |Comments                      |
+|                                                         |                              |
+|Subtopic #4: [Type the name of the subtopic.]            |                              |
+|Questions                                                |Comments                      |
+|                                                         |                              |
+|Summary                                                  |                              |
+|[Summarize all of the contents presented in the lesson.] |                              |
 
 ## 上下文
 
